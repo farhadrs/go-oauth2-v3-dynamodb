@@ -51,7 +51,7 @@ type ClientStore struct {
 }
 
 // Set set client information
-func (cs *ClientStore) Set(clientId, clientSecret, userId, redirectUri, name string, isConfidential bool, createTime, updateTime, validUntil time.Time) (err error) {
+func (cs *ClientStore) Set(clientId, clientSecret, userId, userType, redirectUri, name string, isConfidential bool, createTime, updateTime, validUntil time.Time) (err error) {
 	entity := &client{
 		ClientId:       clientId,
 		ClientSecret:   clientSecret,
