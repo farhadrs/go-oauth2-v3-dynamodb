@@ -59,6 +59,7 @@ func (cs *ClientStore) Set(clientId, clientSecret, userId, userType, redirectUri
 		Name:           name,
 		IsConfidential: isConfidential,
 		UserID:         userId,
+		UserType:       userType,
 		ValidUntil:     validUntil,
 		CreateTime:     createTime,
 		UpdateTime:     updateTime,
@@ -90,6 +91,7 @@ type client struct {
 	RedirectUri    string    `json:"redirect_uri"`
 	Name           string    `json:"name"`
 	UserID         string    `json:"user_id"`
+	UserType       string    `json:"user_type"`
 	ValidUntil     time.Time `json:"valid_until"`
 	CreateTime     time.Time `json:"create_time"`
 	UpdateTime     time.Time `json:"update_time"`
